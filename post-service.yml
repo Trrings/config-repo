@@ -15,7 +15,8 @@ spring:
     active: dev
   config:
     import:
-      - optional:classpath:/common.yml
+#      - optional:classpath:/common.yml
+      - common.yml
 
 
 application:

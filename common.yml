@@ -44,7 +44,7 @@ spring:
     suffix: .html
 
   mail:
-    host: mail.smtp2go.commail.smtp2go.com
+    host: mail.smtp2go.com
     port: 587
     username: pangeanis.com
     password: EG4QKkxv13uItbC9

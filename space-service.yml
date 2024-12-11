@@ -1,12 +1,12 @@
 server:
-  port: 8102
+  port: 8103
   servlet:
     context-path: /space-service
 
 #GRPC config
 grpc:
   server:
-    port: 9002
+    port: 9003
   client:
     authority: localhost:9001
 

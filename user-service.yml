@@ -12,7 +12,8 @@ spring:
     active: dev
   config:
     import:
-      - optional:classpath:/common.yml
+#      - optional:classpath:/common.yml
+      - common.yml
 
 twilio:
   accountSid: ACd83092b93878a0835adea44f7d24a0a4

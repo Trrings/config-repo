@@ -8,7 +8,7 @@ grpc:
   server:
     port: 9002
   client:
-    authority: localhost:9001
+    authority: 66.29.152.193:9001
 
 spring:
   profiles:

@@ -1,18 +1,17 @@
 server:
-  port: ${SERVER_PORT}
+  port: 8105
   servlet:
     context-path: /community-service
 
 #GRPC config
 grpc:
   server:
-    port: ${GRPC_PORT}
+    port: 9005
   client:
-    authority: localhost:${USER_GRPC_PORT}
-
+    authority: localhost:9001
 spring:
   profiles:
-    active: ${ACTIVE_PROFILE}
+    active: dev
   config:
     import:
-      - optional:classpath:/configurations/common.yml
+      - optional:classpath:/common.yml

@@ -23,7 +23,7 @@ spring:
       max-lifetime: 1800000          # 30-minute max connection lifetime
       pool-name: trringsPool
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://66.29.152.193:5432/trringsdbjdbc:postgresql://66.29.152.193:5432/trringsdb
+    url: jdbc:postgresql://66.29.152.193:5432/trringsdb
     username: trrings
     password: trrings123
 

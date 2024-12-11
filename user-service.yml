@@ -1,0 +1,32 @@
+server:
+  port: ${SERVER_PORT}
+  servlet:
+    context-path: /user-service
+
+#GRPC config
+grpc:
+  server:
+    port: ${GRPC_PORT}
+
+spring:
+  profiles:
+    active: ${ACTIVE_PROFILE}
+  config:
+    import:
+      - optional:classpath:/configurations/common.yml
+
+twilio:
+  accountSid: ${TWILIO_ACC_SID}
+  authToken: ${TWILIO_TOKEN}
+  senderPhoneNumber: ${TWILIO_NUMBER}
+
+apple:
+  appleAuthEndpoint: ${IOS_AUTH_URL}
+  clientId: ${IOS_CLIENT_ID}
+  clientSecret: ${IOS_CLIENT_SECRET}
+
+logging:
+  level:
+    com.zaxxer.hikari.HikariConfig: DEBUG
+    com.zaxxer.hikari.HikariPool: DEBUG
+    com.zaxxer.hikari: TRACE

@@ -1,0 +1,18 @@
+server:
+  port: ${SERVER_PORT}
+  servlet:
+    context-path: /space-service
+
+#GRPC config
+grpc:
+  server:
+    port: ${GRPC_PORT}
+  client:
+    authority: localhost:${USER_GRPC_PORT}
+
+spring:
+  profiles:
+    active: ${ACTIVE_PROFILE}
+  config:
+    import:
+      - optional:classpath:/configurations/common.yml

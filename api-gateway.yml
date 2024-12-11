@@ -1,0 +1,40 @@
+server:
+  port: 8092
+
+spring:
+  profiles:
+    active: dev
+  application:
+    name: api-gateway
+
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    service-url:
+      defaultZone: http://66.29.152.193:8090/eureka
+
+
+springdoc:
+  api-docs:
+    path: /api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+    urls:
+      - name: user-service
+        url: /user-service/v3/api-docs
+      - name: post-service
+        url: /post-service/v3/api-docs
+      - name: space-service
+        url: /space-service/v3/api-docs
+      - name: community-service
+        url: /community-service/v3/api-docs
+      - name: moments-service
+        url: /moments-service/v3/api-docs

@@ -1,0 +1,30 @@
+server:
+  port: ${SERVER_PORT}
+  servlet:
+    context-path: /post-service
+
+#GRPC config
+grpc:
+  server:
+    port: ${GRPC_PORT}
+  client:
+    authority: localhost:${USER_GRPC_PORT}
+
+spring:
+  profiles:
+    active: ${ACTIVE_PROFILE}
+  config:
+    import:
+      - optional:classpath:/configurations/common.yml
+
+
+application:
+  ipUrl: https://ipgeolocation.abstractapi.com/v1/?api_key=91ef750b9c79447fb86dee83b23a5ab7&ip_address=
+  postURL: https://pangeanis.com/p/
+  commentURL: https://pangeanis.com/c/
+
+
+#zeggo
+zego:
+  app-id: ${ZEGO_APP_ID}
+  server-secret: ${ZEGO_SECRET}

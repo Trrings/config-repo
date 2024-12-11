@@ -21,11 +21,11 @@ spring:
       idle-timeout: 60000            # Close idle connections after 1 minute
       connection-timeout: 30000      # 30-second timeout for obtaining a connection
       max-lifetime: 1800000          # 30-minute max connection lifetime
-      pool-name: ${DB_POOL}
+      pool-name: trringsPool
     driver-class-name: org.postgresql.Driver
-    url: ${DB_URL}
-    username: ${DB_USERNAME}
-    password: ${DB_PASSWORD}
+    url: jdbc:postgresql://66.29.152.193:5432/trringsdbjdbc:postgresql://66.29.152.193:5432/trringsdb
+    username: trrings
+    password: trrings123
 
   jpa:
     hibernate:
@@ -44,10 +44,10 @@ spring:
     suffix: .html
 
   mail:
-    host: ${MAIL_HOST}
-    port: {$MAIL_PORT}
-    username: ${MAIL_USERNAME}
-    password: ${MAIL_PASSWORD}
+    host: mail.smtp2go.commail.smtp2go.com
+    port: 587
+    username: pangeanis.com
+    password: EG4QKkxv13uItbC9
     protocol: smtp
     properties:
       mail:
@@ -66,24 +66,24 @@ spring:
 cloud:
   aws:
     region:
-      static: ${AWS_REGION}
+      static: ap-south-1
     stack:
       auto: false
     credentials:
-      accessKey: ${AWS_ACCESS}
-      secretKey: ${AWS_SECRET}
+      accessKey: AKIARDB3VCI7NAMSIY4I
+      secretKey: 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
 
 onesignal:
-  appId: ${ONESIGNAL_APP_ID}
-  apiKey: ${ONESIGNAL_API_KEY}
+  appId: dd09e104-a627-47fd-8e42-adb696d8fff1
+  apiKey: YmUyNWQwZDItNjNiMS00ODlhLThiMzgtYjkwZDZiZTUyMDUx
 
 application:
   security:
     jwt:
       refresh-token:
-        expiration: ${JWT_REFRESH_EXP}
-      expiration: ${JWT_EXP}
-      secret-key: ${JWT_SECRET}
+        expiration: 31536000000
+      expiration: 15552000000
+      secret-key: cf56caad05b73d5f76a0cbb87d911f52964307939eedd54ae3e2ec8c5e9d8004
   bucket:
-    name: ${BUCKET_NAME}
-    url: ${BUCKET_URL}
+    name: pangeanis-dev
+    url: https://pangeanis-dev.s3.ap-south-1.amazonaws.com/

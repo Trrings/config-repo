@@ -1,18 +1,18 @@
 server:
-  port: ${SERVER_PORT}
+  port: 8104
   servlet:
     context-path: /moments-service
 
 #GRPC config
 grpc:
   server:
-    port: ${GRPC_PORT}
+    port: 9004
   client:
-    authority: localhost:${USER_GRPC_PORT}
+    authority: localhost:9001
 
 spring:
   profiles:
-    active: ${ACTIVE_PROFILE}
+    active: dev
   config:
     import:
-      - optional:classpath:/configurations/common.yml
+      - optional:classpath:/common.yml

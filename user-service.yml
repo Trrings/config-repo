@@ -1,29 +1,28 @@
 server:
-  port: ${SERVER_PORT}
+  port: 8101
   servlet:
     context-path: /user-service
 
 #GRPC config
 grpc:
   server:
-    port: ${GRPC_PORT}
-
+    port: 9001
 spring:
   profiles:
-    active: ${ACTIVE_PROFILE}
+    active: dev
   config:
     import:
-      - optional:classpath:/configurations/common.yml
+      - optional:classpath:/common.yml
 
 twilio:
-  accountSid: ${TWILIO_ACC_SID}
-  authToken: ${TWILIO_TOKEN}
-  senderPhoneNumber: ${TWILIO_NUMBER}
+  accountSid: ACd83092b93878a0835adea44f7d24a0a4
+  authToken: 835cc4fc486a447c867ac4399eb94409
+  senderPhoneNumber: +12058947136
 
 apple:
-  appleAuthEndpoint: ${IOS_AUTH_URL}
-  clientId: ${IOS_CLIENT_ID}
-  clientSecret: ${IOS_CLIENT_SECRET}
+  appleAuthEndpoint: https://appleid.apple.com/auth/token
+  clientId: com.dev.pangeanis
+  clientSecret: eyJraWQiOiJINFJOVlRHSjhSIiwiYWxnIjoiRVMyNTYifQ.eyJpc3MiOiIzRldaNDNIVTVQIiwiaWF0IjoxNzA0OTk5Mjk5LCJleHAiOjE3MjA1NTEyOTksImF1ZCI6Imh0dHBzOi8vYXBwbGVpZC5hcHBsZS5jb20iLCJzdWIiOiJjb20uZGV2LnBhbmdlYW5pcyJ9._RAR8J-BKYLSvIuNEuXol8bsfpdN_8eqczHdhKAwT2xncEs6BwjxAHQUetECO63TKGiev4XIyj_O87pxBanaaA
 
 logging:
   level:

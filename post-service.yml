@@ -1,21 +1,21 @@
 server:
-  port: ${SERVER_PORT}
+  port: 8102
   servlet:
     context-path: /post-service
 
 #GRPC config
 grpc:
   server:
-    port: ${GRPC_PORT}
+    port: 9002
   client:
-    authority: localhost:${USER_GRPC_PORT}
+    authority: localhost:9001
 
 spring:
   profiles:
-    active: ${ACTIVE_PROFILE}
+    active: dev
   config:
     import:
-      - optional:classpath:/configurations/common.yml
+      - optional:classpath:/common.yml
 
 
 application:
@@ -26,5 +26,5 @@ application:
 
 #zeggo
 zego:
-  app-id: ${ZEGO_APP_ID}
-  server-secret: ${ZEGO_SECRET}
+  app-id: 1136374730
+  server-secret: 32eab3b9220fa3d339eaf0460e3d0a53

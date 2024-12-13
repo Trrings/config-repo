@@ -2,7 +2,7 @@
 eureka:
   client:
     service-url:
-      defaultZone: http://66.29.152.193:8090/eureka
+      defaultZone: http://${application.server.host}:8090/eureka
 
 spring:
   task:
@@ -23,7 +23,7 @@ spring:
       max-lifetime: 1800000          # 30-minute max connection lifetime
       pool-name: trringsPool
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://66.29.152.193:5432/trringsdb
+    url: jdbc:postgresql://${application.server.host}:5432/trringsdb
     username: trrings
     password: trrings123
 
@@ -78,6 +78,8 @@ onesignal:
   apiKey: YmUyNWQwZDItNjNiMS00ODlhLThiMzgtYjkwZDZiZTUyMDUx
 
 application:
+  server:
+    host: 66.29.152.193
   security:
     jwt:
       refresh-token:

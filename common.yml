@@ -87,3 +87,11 @@ application:
   bucket:
     name: pangeanis-dev
     url: https://pangeanis-dev.s3.ap-south-1.amazonaws.com/
+
+
+cloudflare:
+  r2:
+    bucket-name: trrings-dev
+    access-key: f2cf8630c470031d625f83625bf9d7cd
+    secret-key: 34c3bee7ee108c27721617d2ff30977cfe1640abcc0667ee20244099c57dcc2d
+    endpoint-url: https://34000b62cd4a939b78fb911eb8f0f031.r2.cloudflarestorage.com/${cloudflare.r2.bucket-name}/

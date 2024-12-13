@@ -16,11 +16,14 @@ spring:
 
 eureka:
   instance:
-    hostname: 66.29.152.193
+    hostname: ${application.server.host}
   client:
     service-url:
-      defaultZone: http://66.29.152.193:8090/eureka
+      defaultZone: http://${application.server.host}:8090/eureka
 
+application:
+  server:
+    host: 66.29.152.193
 
 springdoc:
   api-docs:

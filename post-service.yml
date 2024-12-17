@@ -9,7 +9,7 @@ grpc:
     port: 9002
   client:
     user-service:  # name for your auth service client
-      address: static://66.29.152.193:9001
+      address: static://${application.server.host}:9001
       negotiationType: PLAINTEXT  # or TLS if you're using secure communication
       enable-keep-alive: true
       keep-alive-without-calls: true

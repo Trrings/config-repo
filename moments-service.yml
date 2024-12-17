@@ -8,7 +8,7 @@ grpc:
   server:
     port: 9004
   client:
-    authority: 66.29.152.193:9001
+    authority: ${application.server.host}:9001
 
 spring:
   profiles:

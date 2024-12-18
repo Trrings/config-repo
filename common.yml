@@ -88,4 +88,14 @@ application:
       secret-key: cf56caad05b73d5f76a0cbb87d911f52964307939eedd54ae3e2ec8c5e9d8004
   bucket:
     name: pangeanis-dev
-    url: https://pangeanis-dev.s3.ap-south-1.amazonaws.com/
+#    url: https://pangeanis-dev.s3.ap-south-1.amazonaws.com/
+    url: https://pub-fe5297248e374271a7425aa6773598c3.r2.dev/
+
+
+
+cloudflare:
+  r2:
+    access-key: f2cf8630c470031d625f83625bf9d7cd
+    secret-key: 34c3bee7ee108c27721617d2ff30977cfe1640abcc0667ee20244099c57dcc2d
+    endpoint-url: https://34000b62cd4a939b78fb911eb8f0f031.r2.cloudflarestorage.com
+    bucket-name: trrings-dev

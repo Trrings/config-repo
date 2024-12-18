@@ -7,6 +7,14 @@ server:
 grpc:
   server:
     port: 9001
+  client:
+    post-service:
+      address: static://${application.server.host}:9002
+      negotiationType: PLAINTEXT
+      enable-keep-alive: true
+      keep-alive-without-calls: true
+
+
 spring:
   profiles:
     active: dev

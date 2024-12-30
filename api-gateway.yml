@@ -23,7 +23,7 @@ eureka:
 
 application:
   server:
-    host: 66.29.152.193
+    host: 66.29.130.252
 
 springdoc:
   api-docs:

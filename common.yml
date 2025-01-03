@@ -23,7 +23,7 @@ spring:
       max-lifetime: 1800000          # 30-minute max connection lifetime
       pool-name: trringsPool
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://66.29.152.193:5432/trringsdb
+    url: jdbc:postgresql://${application.server.host}:5432/trringsdb
     username: trrings
     password: trrings123
 
@@ -74,8 +74,8 @@ cloud:
       secretKey: SPqzTY3+f1lZx7Rhpv1rw/u14LkkaV83xxFrdOnm
 
 onesignal:
-  appId: dd09e104-a627-47fd-8e42-adb696d8fff1
-  apiKey: YmUyNWQwZDItNjNiMS00ODlhLThiMzgtYjkwZDZiZTUyMDUx
+  appId: 0f1ab02e-e600-43b4-acab-cb8a92a67216
+  apiKey: os_v2_app_b4nlalxgabb3jlflzofjfjtsc3ovdks7foredbuwt5kya6jrfxpquhmqiuewmz4ojygzzy3mqlga4qg7kfaipzdvsyet6hjlgqq4aki
 
 application:
   server:
